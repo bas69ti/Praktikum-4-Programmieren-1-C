@@ -27,7 +27,6 @@ int ist_symmetrisch(int mtrx[MAX][MAX]) {
 				return 0;
 		}
 	}
-
 	return 1;
 }
 
@@ -50,7 +49,6 @@ void init(student sl[MAXL]) {
 
 		sl[i].matrikelnummer = 0;
 		sl[i].fachsemester = 0;
-
 		strcpy(sl[i].vorname, "n.n.");
 		strcpy(sl[i].nachname, "n.n.");
 
@@ -62,7 +60,6 @@ void init(student sl[MAXL]) {
 void print(student sl[MAXL]) {
 
 	system("cls");
-
 	printf("%-15s%-15s%-15s%-15s\n", "Matrikelnr.", "Vorname", "Nachname", "Fachsemester");
 
 	for (int i = 0; i < MAXL; i++) {
@@ -71,7 +68,6 @@ void print(student sl[MAXL]) {
 
 	while (!kbhit());
 	system("cls");
-
 }
 
 void eingeben(student sl[MAXL]) {
@@ -98,27 +94,22 @@ void eingeben(student sl[MAXL]) {
 
 		printf("Bitte Fachsemster eingeben: ");
 		rgw = scanf("%c%*[^\n]", &sl[p].fachsemester);
-
 		
 		printf("\nStudent erfolgreich eingetragen!\n");
 	}
-
 	while (!kbhit());
 	system("cls");
-
 }
 
 int suchen(student sl[MAXL]) {
 
 	system("cls");
-
 	char name[MAXN];
 	int p = 0;
 
 	printf("Bitte Nachname des Studenten eingeben: ");
 	int rgw =scanf("%s", name);
 	
-
 	while (p < MAXL && strcmp(name, sl[p].nachname) != 0)
 		p++;
 
@@ -128,7 +119,6 @@ int suchen(student sl[MAXL]) {
 void loeschen(student sl[MAXL]) {
 
 	system("cls");
-
 	int p = suchen(sl);
 
 	if (p == MAXL)
@@ -146,13 +136,9 @@ void loeschen(student sl[MAXL]) {
 
 	while (!kbhit());
 	system("cls");
-
 }
 
 int main() {
-
-	
-
 
 #ifdef Aufgabe1
 	int mtrx[MAX][MAX] = { {1, 2, 3},
@@ -229,5 +215,6 @@ int main() {
 
 	}
 #endif // Aufgabe2
+
 
 }
