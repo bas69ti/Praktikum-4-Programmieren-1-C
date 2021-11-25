@@ -9,7 +9,7 @@
 #define MAX 3
 #define MAXV 10
 #define MAXN 20
-#define MAXL 3
+#define MAXL 10
 typedef enum { false, true } bool;
 
 //#define Aufgabe1
@@ -101,6 +101,7 @@ void eingeben(student sl[MAXL]) {
 	system("cls");
 }
 
+//Sucht Studenten in der Liste
 int suchen(student sl[MAXL]) {
 
 	system("cls");
@@ -108,14 +109,15 @@ int suchen(student sl[MAXL]) {
 	int p = 0;
 
 	printf("Bitte Nachname des Studenten eingeben: ");
-	int rgw =scanf("%s", name);
-	
+	int rgw = scanf("%s", name);
+
 	while (p < MAXL && strcmp(name, sl[p].nachname) != 0)
 		p++;
 
 	return p;
 }
 
+//Löscht Studenten aus der Liste
 void loeschen(student sl[MAXL]) {
 
 	system("cls");
@@ -212,9 +214,8 @@ int main() {
 			while (!kbhit());
 			system("cls");
 		}
-
 	}
-#endif // Aufgabe2
 
+#endif // Aufgabe2
 
 }
